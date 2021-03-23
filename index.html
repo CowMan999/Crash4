@@ -1,10 +1,16 @@
-<script type="text/javascript"> 
-onbeforeunload = function(){localStorage.x=1};
-
-if(confirm("Do you REALLY want me to crash your browser?")){
-  setTimeout(function(){
-    while(1)location.reload(1)
-  }, 1000)
+<button onclick="crash()">???</button>
+    <script type="text/javascript">
+function crash(){
+  if(navigator.userAgent.indexOf("Chrome") != -1 )
+    {
+      alert('WHoops')
+window.open('http://crashchrome.com/', '_self', '');
+    }
+    else {
+      alert('Hehe')
+      while (1==1){
+        console.log(3234567654*45671234567890987654321)
+      }
+    }
 }
-</script> 
-
+</script>
